@@ -30,14 +30,14 @@ module.exports = (app)=>{
     app.get('/address/:id', authController.getAddress);
 
 
-    //  PUT /user/:id
+    //  PUT /user/:id              ---> Update Customer
     app.put('/user/:id', authController.updateUser);
 
-    //  PUT /address/:id
+    //  PUT /address/:id            ---> Update Address
     app.put('/address/:id', authController.updateAddress);
 
 
-    //  DELETE /user/:id
+    //  DELETE /user/:id            ---> Delete customer with customerID
     app.delete('/user/:id', authController.deleteUser);
 
 
@@ -51,5 +51,5 @@ module.exports = (app)=>{
 
     //Delete particular address by id
     app.delete('/address/:id', authController.deleteAddress);
-
+    
 }
